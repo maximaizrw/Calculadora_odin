@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                fontFamily: {
+                    'body': ['"Source Code Pro"', 'monospace'],
+                }
+            }
+        }
+    </script>
+    <title>Calculadora</title>
+</head>
+
+<body class="font-body bg-neutral-400 dark:bg-red-400">
+    <button id="dark-mode-button">Activar modo claro</button>
+    <div class="container min-h-screen flex justify-center items-center">
+        <div id="calculadora" class="bg-neutral-800 w-80 h-[32rem] rounded-lg flex flex-col dark:bg-white">
+            <div id="pantalla" class="h-2/5 flex flex-col justify-end">
+                <div class="div flex flex-col items-end p-7">
+                    <p class="display text-neutral-500">0</p>
+                    <p class="result text-white text-6xl dark:text-black" id="resultado">0</p>
+                </div>
+                <div class="flex justify-center">
+                    <hr class="border-neutral-700 w-3/4 dark:border-neutral-200">
+                </div>
+
+            </div>
+            <div id="numerico" class="grow text-white px-10 py-5 grid grid-cols-4 gap-4 justify-items-center">
+                <button
+                    class="clear rounded-full w-10 h-10 bg-neutral-700 hover:bg-neutral-600 dark: bg-neutral-200 text-neutral-600 hover:bg-neutral-300"
+                    value="clear">C</button>
+                <button
+                    class="sign rounded-full w-10 h-10 bg-neutral-700 hover:bg-neutral-600 dark: bg-neutral-200 text-neutral-600 hover:bg-neutral-300"
+                    value="sign">+/-</button>
+                <button
+                    class="operator rounded-full w-10 h-10 bg-neutral-700 hover:bg-neutral-600 dark: bg-neutral-200 text-neutral-600 hover:bg-neutral-300"
+                    value="percent">%</button>
+                <button
+                    class="operator rounded-full w-10 h-10 bg-neutral-700 text-red-600 hover:bg-neutral-600 dark: bg-neutral-200 hover:bg-neutral-300"
+                    value="/">/</button>
+                <button
+                    class="number rounded-full w-10 h-10 hover:bg-neutral-700 dark:text-neutral-500 hover:dark:bg-neutral-200"
+                    value="7">7</button>
+                <button
+                    class="number rounded-full w-10 h-10 hover:bg-neutral-700 dark:text-neutral-500 hover:dark:bg-neutral-200"
+                    value="8">8</button>
+                <button
+                    class="number rounded-full w-10 h-10 hover:bg-neutral-700 dark:text-neutral-500 hover:dark:bg-neutral-200"
+                    value="9">9</button>
+                <button
+                    class="operator rounded-full w-10 h-10 bg-neutral-700 text-red-600 hover:bg-neutral-600 dark: bg-neutral-200 hover:bg-neutral-300"
+                    value="x">x</button>
+                <button
+                    class="number rounded-full w-10 h-10 hover:bg-neutral-700 dark:text-neutral-500 hover:dark:bg-neutral-200"
+                    value="4">4</button>
+                <button
+                    class="number rounded-full w-10 h-10 hover:bg-neutral-700 dark:text-neutral-500 hover:dark:bg-neutral-200"
+                    value="5">5</button>
+                <button
+                    class="number rounded-full w-10 h-10 hover:bg-neutral-700 dark:text-neutral-500 hover:dark:bg-neutral-200"
+                    value="6">6</button>
+                <button
+                    class="operator rounded-full w-10 h-10 bg-neutral-700 text-red-600 hover:bg-neutral-600 dark: bg-neutral-200 hover:bg-neutral-300"
+                    value="-">-</button>
+                <button
+                    class="number rounded-full w-10 h-10 hover:bg-neutral-700 dark:text-neutral-500 hover:dark:bg-neutral-200"
+                    value="1">1</button>
+                <button
+                    class="number rounded-full w-10 h-10 hover:bg-neutral-700 dark:text-neutral-500 hover:dark:bg-neutral-200"
+                    value="2">2</button>
+                <button
+                    class="number rounded-full w-10 h-10 hover:bg-neutral-700 dark:text-neutral-500 hover:dark:bg-neutral-200"
+                    value="3">3</button>
+                <button
+                    class="operator rounded-full w-10 h-10 bg-neutral-700 text-red-600 hover:bg-neutral-600 dark: bg-neutral-200 hover:bg-neutral-300"
+                    value="+">+</button>
+                <button
+                    class="number rounded-full w-10 h-10 hover:bg-neutral-700 dark:text-neutral-500 hover:dark:bg-neutral-200"
+                    value="0">0</button>
+                <button
+                    class="number rounded-full w-10 h-10 hover:bg-neutral-700 dark:text-neutral-500 hover:dark:bg-neutral-200"
+                    value="00">00</button>
+                <button
+                    class="decimal rounded-full w-10 h-10 hover:bg-neutral-700 dark:text-neutral-500 hover:dark:bg-neutral-200"
+                    value=".">.</button>
+                <button class="equal rounded-full w-10 h-10 bg-red-600 hover:bg-red-500" value="=">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
